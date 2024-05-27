@@ -77,7 +77,7 @@ def predicciones():
     df['Predicciones_GYMNCATE'] = np.concatenate((y_pred[:, 1], np.full(len(df) - len(y_pred), np.nan)))
     df['Cluster'] = np.concatenate((new_clusters, np.full(len(df) - len(new_clusters), np.nan)))
     df.dropna(subset=['Predicciones_GYMNCATE', 'Predicciones_PSEUSPP'], inplace=True)
-    df.to_csv('Tablas/resultados_predicciones2.csv', index=False)
+    df.to_csv('resultados_predicciones2.csv', index=False)
 
 
     indice_PSEUSPP = df.columns.get_loc("Predicciones_PSEUSPP")
